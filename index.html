@@ -1,20 +1,28 @@
-<div class="wrapper">
-    <h1>Hangman</h1>
-     <h2>Vanilla JavaScript Hangman Game</h2>
-     <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
- </div>
- <div class="wrapper">
-     <div id="buttons">
-     </div>  
-     <p id="catagoryName"></p>
-     <div id="hold">
-     </div>
-     <p id="mylives"></p>
-     <p id="clue">Clue -</p>  
-      <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
-     <div class="container">
-       <button id="hint">Hint</button>
-       <button id="reset">Play again</button>
-     </div>
- </div>
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap 4 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <title>Hangman</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center">Hangman</h1>
+  <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+  <div class="text-center">
+    <img id="hangmanPic" src="images/0.png" alt="">
+    <p>Guess the Programming Language:</p>
+    <p id="wordSpotlight">The word to be guessed goes here</p>
+    <div id="keyboard"></div>
+    <button class="btn btn-info" onClick="reset()">Reset</button>
+  </div> 
+</div>
+
+<script src="hangman.js"></script>
+</body>
+</html>
